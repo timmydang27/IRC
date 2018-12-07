@@ -4,8 +4,12 @@ import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.command.Command;
 import frc.team4159.robot.subsystems.Drivetrain;
 
-public class Auto extends Command{
-    private Timer timer = new Timer();
+public class Auto extends CommandGroup{
+    public Auto(){
+        addSequential(new AutoDrive(0.5));
+    }
+
+    /*private Timer timer = new Timer();
     private Drivetrain drivetrain = Drivetrain.getInstance();
 
     public Auto(){
@@ -36,6 +40,6 @@ public class Auto extends Command{
     protected void interrupted(){
 
     }
-
+*/
 
 }

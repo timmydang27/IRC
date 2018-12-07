@@ -24,11 +24,11 @@ public class OI {
 
     public double getLeftJoy(){
 
-        return xbox.getRawAxis(1);
+        return -xbox.getRawAxis(1);
     }
 
     public double getRightJoy(){
-        return secondaryJoy.getRawAxis(0);
+        return -xbox.getRawAxis(5);
     }
 
     public double getArmJoy(){
@@ -37,9 +37,9 @@ public class OI {
 
     public boolean intakeButtonPressed(){
         return secondaryJoy.getRawButtonPressed(5);
-    }
+    } //todo
 
     public boolean outtakeButtonPressed(){
         return secondaryJoy.getRawButtonPressed(8);
-    }
+    } //todo
 }

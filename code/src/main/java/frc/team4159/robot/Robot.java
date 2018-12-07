@@ -39,8 +39,9 @@ public class Robot extends TimedRobot {
     //run when the robot starts auto
     public void autonomousInit(){
 
-        Command auto = new Auto();
-        auto.start();
+        if(auto != null){
+            auto.start();
+        }
     }
 
     @Override
@@ -51,7 +52,9 @@ public class Robot extends TimedRobot {
     @Override
     //when you start teleop, after auto when you start driving
     public void teleopInit(){
-
+            if (auto != null){
+                auto.cancel();
+            }
     }
     @Override
     //loops during teleop
