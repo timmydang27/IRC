@@ -1,9 +1,12 @@
 package frc.team4159.robot;
 
 import edu.wpi.first.wpilibj.TimedRobot;
+import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
+import frc.team4159.robot.command.Auto;
 import frc.team4159.robot.subsystems.Arm;
 import frc.team4159.robot.subsystems.Drivetrain;
+
 
 public class Robot extends TimedRobot {
 
@@ -12,7 +15,6 @@ public class Robot extends TimedRobot {
     private static Arm arm;
 
     @Override
-
     // run when robot turns on; treat as constructor
     public void robotInit(){
         drivetrain = Drivetrain.getInstance();
@@ -37,7 +39,10 @@ public class Robot extends TimedRobot {
     //run when the robot starts auto
     public void autonomousInit(){
 
+        Command auto = new Auto();
+        auto.start();
     }
+
     @Override
     //loops this while you're in auto mode
     public void autonomousPeriodic(){

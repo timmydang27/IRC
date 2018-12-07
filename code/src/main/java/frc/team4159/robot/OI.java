@@ -20,8 +20,6 @@ public class OI {
     private OI() {
         xbox = new Joystick(0);
         secondaryJoy = new Joystick(1);
-
-
     }
 
     public double getLeftJoy(){

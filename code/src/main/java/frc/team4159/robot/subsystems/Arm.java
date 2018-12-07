@@ -19,7 +19,6 @@ public class Arm extends Subsystem {
     private VictorSP ArmVictor;
 
 
-
     private Arm(){
 
         ArmVictor = new VictorSP(3);
