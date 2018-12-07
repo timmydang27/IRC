@@ -13,6 +13,7 @@ public class Robot extends TimedRobot {
     private Drivetrain drivetrain;
     private OI oi;
     private static Arm arm;
+    private Command auto = new Auto();
 
     @Override
     // run when robot turns on; treat as constructor

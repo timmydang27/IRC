@@ -30,6 +30,8 @@ public class Intake  extends Subsystem{
     public void outtake(){
         rightVictor.set(-1);
         leftVictor.set(1);
+
+
     }
 
     public void stop(){
